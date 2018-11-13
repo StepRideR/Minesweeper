@@ -1,0 +1,32 @@
+<!Doctype HTML>
+<HTML>
+<meta charset='utf-8'></meta>
+<head>
+	<title> Игра сапёр </title>
+	<script src='jquery-3.3.1.js' ></script>
+	<script src='saper.js' ></script>
+	<link href='saper.css' rel='stylesheet'></link>
+</head>
+<body class='body'>
+	<h1 style='text-align: center; background-image: url("hat.jpg"); color: red'>невероятный сапёр</h1>
+	<h4 style='text-align: center'> 
+	введите ширину поля <input type='number' class='firstDiv' value='10' onchange='checkIt($(".firstDiv")[0].value)'></input>
+	введите высоту поля <input type='number' class='secondDiv' value='10' onchange='checkIt($(".secondDiv")[0].value)'></input>
+	введите количество мин <input type='number' class='thirdDiv' value='20' onchange='checkIt($(".thirdDiv")[0].value)'></input>
+	<button class='restart' onclick='restart()' disabled='disabled'>restart</button>
+	<button class='start' onclick='start()'>start</button></h4>
+	<div style='text-align: center; position: relative; top: 10px'><button onclick='quickStart("1")'>лёгкий</button><button 
+	onclick='quickStart("2")'>средний</button><button onclick='quickStart("3")'>сложный</button></div>
+	<div class='field'></div>
+	<div style='margin-left: 68%; top: 20%; position: absolute'>
+	<h3>осталось отметить <span id='test'></span> мин</h3></div>
+	<div class='rules'>
+	<h5>Правила игры "сапёр"</h5>
+	Нажав на ячейку, вы увидите, что она скрывала число.<br>
+	Это число показывает, сколько мин скрыто вокруг ячейки.<br>
+	Если вы открыли ячейку с миной, то игра проиграна.<br>
+	Что бы пометить ячейку, в которой находится бомба,<br> 
+	нажмите на неё правой кнопкой мыши.	Игра продолжается до<br>
+	тех пор, пока вы не пометите все заминированные ячейки.</div>
+</body>
+</html>
